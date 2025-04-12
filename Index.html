@@ -5,6 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
 
+<style>
+  .d-container{
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+}
+.d-cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-150px) rotateY(0deg);
+    animation: cube 26s infinite;
+}
+.d-cube figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+}
+.d-cube figure img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;   
+}
+figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(150px);
+}
+figure:nth-child(2) {
+    transform: rotateX(180deg) translateZ(150px);
+}
+figure:nth-child(3) {
+    transform: rotateY(90deg) translateZ(150px);
+}
+figure:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+figure:nth-child(5) {
+    transform: rotateX(90deg) translateZ(150px);
+}
+figure:nth-child(6){
+    transform: rotateX(-90deg) translateZ(150px);
+}
+@keyframes cube {
+    0% {
+        transform: translateZ(-150px) rotateY(0deg);
+    }
+    16.66% {
+        transform: translateZ(-150px) rotateX(-180deg);
+    }
+    33.32% {
+        transform: translateZ(-150px) rotateY(-90deg);
+    }
+    50% {
+        transform: translateZ(-150px) rotateY(90deg);
+    }
+    66.66% {
+        transform: translateZ(-150px) rotateX(-90deg);
+    }
+    83.32% {
+        transform: translateZ(-150px) rotateX(90deg);
+    }
+    100% {
+        transform: translateZ(-150px) rotateY(0deg);
+    }
+}
+</style>
+
 </head>
 <body>
   
@@ -45,7 +117,28 @@
 
   <script src="js/js.js"></script>
 
-
+  <div class="d-container">
+      <div class="d-cube">
+          <figure>
+              <img src="Card/_3uNiybyXYM.jpg" alt="photo">
+          </figure>
+          <figure>
+              <img src="Card/solur_2-Enhanced-scaled.jpg" alt="photo">
+          </figure>
+          <figure>
+              <img src="Card/217f4ees-1920.jpg" alt="photo">
+          </figure>
+          <figure>
+              <img src="Card/968bd228.jpg" alt="photo">
+          </figure>
+          <figure>
+              <img src="Card/dsc_9837-1-1024x684.jpg" alt="photo">
+          </figure>
+          <figure>
+              <img src="Card/9a8b821f4ac7eb15c1c2f165ebcae202.jpg" alt="photo">
+          </figure>
+      </div>
+  </div>
 
 </body>
 </html>
