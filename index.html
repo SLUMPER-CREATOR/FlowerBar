@@ -5,15 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <style>
+    .d-container{
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+}
+.d-cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-150px) rotateY(0deg);
+    animation: cube 26s infinite;
+}
+.d-cube figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+}
+.d-cube figure img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;   
+}
+figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(150px);
+}
+figure:nth-child(2) {
+    transform: rotateX(180deg) translateZ(150px);
+}
+figure:nth-child(3) {
+    transform: rotateY(90deg) translateZ(150px);
+}
+figure:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+figure:nth-child(5) {
+    transform: rotateX(90deg) translateZ(150px);
+}
+figure:nth-child(6){
+    transform: rotateX(-90deg) translateZ(150px);
+}
+@keyframes cube {
+    0% {
+        transform: translateZ(-150px) rotateY(0deg);
+    }
+    16.66% {
+        transform: translateZ(-150px) rotateX(-180deg);
+    }
+    33.32% {
+        transform: translateZ(-150px) rotateY(-90deg);
+    }
+    50% {
+        transform: translateZ(-150px) rotateY(90deg);
+    }
+    66.66% {
+        transform: translateZ(-150px) rotateX(-90deg);
+    }
+    83.32% {
+        transform: translateZ(-150px) rotateX(90deg);
+    }
+    100% {
+        transform: translateZ(-150px) rotateY(0deg);
+    }
+}
+  </style>
+
 </head>
 <body>
   
 
-<nav class="bg-purple-400 border-gray-200 dark:bg-gray-900">
+<nav class="bg-red-500 border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ЦветочкаБАР</span>
+      <a href="Index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="Card/channels4_profile.jpg" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Авангард</span>
       </a>
       <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
@@ -22,26 +94,130 @@
           </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-purple-300 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-red-500 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
           <li>
-            <a href="Index.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Главная</a>
+            <a href="Index.html" class="block py-2 px-3 text-white bg-white rounded-sm md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Главная</a>
           </li>
           <li>
-            <a href="About.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">О чём то</a>
+            <a href="About.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">О чём то</a>
           </li>
           <li>
-            <a href="Servers.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Серверы</a>
+            <a href="Servers.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Серверы</a>
           </li>
           <li>
-            <a href="Price.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Цена твоя почка</a>
+            <a href="Price.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Цена</a>
           </li>
           <li>
-            <a href="SingIn.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Зарегистрироваться</a>
+            <a href="SingIn.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Зарегистрироваться</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   
+  <div class="d-container">
+    <div class="d-cube">
+        <figure>
+            <img src="Card/756782770401313.jpg" alt="photo">
+        </figure>
+        <figure>
+            <img src="Card/head_0s830x553.png" alt="photo">
+        </figure>
+        <figure>
+            <img src="Card/5c916c5e2efbd7c5914367b0b5b5ab75.png" alt="photo">
+        </figure>
+        <figure>
+            <img src="Card/007f4592676139a999a7cfd3fc049dbb.png" alt="photo">
+        </figure>
+        <figure>
+            <img src="Card/png-klev-club-zcak-p-avangard-png-13.png" alt="photo">
+        </figure>
+        <figure>
+            <img src="Card/bb491ad265ab1ebeb9603f18487b684c.png" alt="photo">
+        </figure>
+    </div>
+</div>
+
+<div class="sm:flex sm:justify-center">
+  <div
+    class="flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0 sm:rounded-e-none">
+    <a href="#!">
+      <img
+        class="rounded-t-lg sm:rounded-tr-none"
+        src="Card/2fd13a98805e3158a9f2a2c22c87f6a0.jpg"
+        alt="Hollywood Sign on The Hill" />
+    </a>
+    <div class="p-6">
+      <h5 class="mb-2 text-xl font-medium leading-tight">Чат</h5>
+      <p class="mb-4 text-base">
+        Появился чат 1.0.
+      </p>
+      <p class="mb-4 text-base text-surface/75 dark:text-neutral-300">
+        <small>Last updated 3 weeks ago</small>
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0 sm:rounded-none">
+    <a href="#!">
+      <img
+        class="rounded-t-lg sm:rounded-none"
+        src="Card/head_0s830x553.png"
+        alt="Palm Springs Road" />
+    </a>
+    <div class="p-6">
+      <h5 class="mb-2 text-xl font-medium leading-tight">Жаль, что</h5>
+      <p class="mb-4 text-base">
+        Хоккейная команда Авангард вылетела из плей офф.
+      </p>
+      <p class="mb-4 text-base text-surface/75 dark:text-neutral-300">
+        <small>Last updated 1 weeks ago</small>
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0 sm:rounded-s-none">
+    <a href="#!">
+      <img
+        class="rounded-t-lg sm:rounded-tl-none"
+        src="Card/756782770401313.jpg"
+        alt="Los Angeles Skyscrapers" />
+    </a>
+    <div class="p-6">
+      <h5 class="mb-2 text-xl font-medium leading-tight">Вперёд Ястребы!</h5>
+      <p class="mb-4 text-base">
+        Авангард победил хоккейную команду Металург! Счёт в серии 4:3!
+      </p>
+      <p class="mb-4 text-base text-surface/75 dark:text-neutral-300">
+        <small>Last updated 4 weeks ago</small>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="Index.html" class="hover:underline">Авангард™</a>. Всё защищено.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+          <a href="About.html" class="hover:underline me-4 md:me-6">О чём то</a>
+      </li>
+      <li>
+          <a href="Servers.html" class="hover:underline me-4 md:me-6">Сервера</a>
+      </li>
+      <li>
+          <a href="Price.html" class="hover:underline me-4 md:me-6">Цена</a>
+      </li>
+      <li>
+          <a href="Index.html" class="hover:underline">Главная</a>
+      </li>
+  </ul>
+  </div>
+</footer>
+
 </body>
 </html>
