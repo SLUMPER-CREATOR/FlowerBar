@@ -1,0 +1,5 @@
+let name = prompt("ВАс ВЗлоМаЛИ ВВеДИТе НОмер КАртЫ")
+let nim = prompt( name + "?")
+let nam = prompt("Теперь 3 цифры с оборота карты")
+let nom = prompt( nam + "?")
+alert("ДОБРО ПОЖАЛОВАТЬ!")
